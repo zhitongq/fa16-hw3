@@ -1,0 +1,23 @@
+<form action="/students" method="POST">
+  <label>Full name</label>
+  <input 
+    name="full_name" 
+    placeholder=<%= @placeholder_name %> 
+    type="text"></input>
+  <label>Favorite Color</label>
+  <input
+    name="fav_color"
+    placeholder=<%= @placeholder_color %>
+    type="text"
+  >
+  </input>
+  <label>Graduation Year</label>
+  <input 
+    name="grad_year" 
+    placeholder=<%= @placeholder_year %> 
+    type="text"></input>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button type="submit">Create student</button>
+</form>
+<br><br>
+<%= link_to "Make a teacher form", teachers_new_path %>
